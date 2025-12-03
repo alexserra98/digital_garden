@@ -1,6 +1,6 @@
 ---
-title: Welcome to Quartz
+title: Welcome to my Digital Garden!
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+Hey there! I am Alex, this is a public selection of notes from my local digital garden.
+You can contact me at alex.serra.pietro[at]gmail.com

@@ -1,6 +1,9 @@
-THIS IS TAKEN FROM ELEMENTS OF STAT INFERENCE
-# Causal Journey 3
-[[causality]]
+---
+title: Causal Journey 3
+draft: false
+
+---
+[causality]
 ## Markov Property, Faithfulness and Causal Minimality
 
 It turns out that the (conditional) independences are a powerful criterion to classify mechanisms in a causal graph. Under the mild assumption that the joint distribution has a density we can define the Markov Property as follow:

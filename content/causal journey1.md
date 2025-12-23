@@ -1,4 +1,8 @@
-# Causal Journey 1
+---
+title: Causal Journey 1
+draft: false
+
+---
 [[causality]]
 This is the first of series of small notes I am making along the way while studying causality. The idea is not to summarise everything in details but just note down the things either impressed the most or I had found them harder to understand.
 ## Causal Bayesian Network

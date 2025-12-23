@@ -1,6 +1,10 @@
-# Causal Journey 4
-## Confounder
+---
+title: Causal Journey 4
+draft: false
+
+---
 [[causality]]
+## Confounder
 Given a variable $X$ that affects a response variables $Y$ the traditional statistics call a confounder $Z$ a variable that is:
 - Correlated with $X$
 - Correlated with $Y$ when $X=0$

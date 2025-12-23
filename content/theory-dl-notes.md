@@ -1,3 +1,8 @@
+---
+title: Theory of Deep Learning - Lecture Notes
+draft: false
+
+---
 # Optimization of a Quadratic Cost Function
 
 ## Linear Regression Model

@@ -1,4 +1,8 @@
-# Causal Journey 5
+---
+title: Causal Journey 5
+draft: false
+
+---
 [[causality]]
 ## Intervention in Markovian Models
 First of all we can define an intervention in 2 different ways.

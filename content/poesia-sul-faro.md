@@ -15,7 +15,7 @@ Una macchia di colore in un mare increspato
 
 Sorridevi luminosa 
 
-Mentre i pesci i pesci solleticavano i nostri piedi
+Mentre i pesci solleticavano i nostri piedi
 
 Ti ho sognata
 
@@ -39,6 +39,6 @@ Le ombre evaporano e il mondo si scompone in simboli e geometrie
 
 Tutto appare come è
 
-Tutto ciò che è 
+Tutto ciò che è appare
 
 ![[a_group_of_people_running_on_a_concrete_wall_next_to_a_lighthouse.jpg]]

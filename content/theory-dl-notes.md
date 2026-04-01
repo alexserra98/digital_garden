@@ -3,6 +3,9 @@ title: Theory of Deep Learning - Lecture Notes
 draft: false
 
 ---
+
+[[deeplearning_theory]]
+
 # Optimization of a Quadratic Cost Function
 
 ## Linear Regression Model

@@ -1,9 +1,9 @@
 ---
 title: Causal Journey 1
 draft: false
-
+tags:
+    - causality
 ---
-[[causality]]
 This is the first of series of small notes I am making along the way while studying causality. The idea is not to summarise everything in details but just note down the things either impressed the most or I had found them harder to understand.
 ## Causal Bayesian Network
 This tool is an extension of the most common bayesian graph which is DAG in which each node represent and arrow and each edge means that there is a correlation. This kind of graphical tool is pretty convenient because it simplify both sampling and making inference for otherwise complicated distribution. 

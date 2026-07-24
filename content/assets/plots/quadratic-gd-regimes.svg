@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="440" viewBox="0 0 1080 440" role="img" aria-labelledby="title desc">
+  <title id="title">Gradient descent regimes on a quadratic objective</title>
+  <desc id="desc">Three panels show monotone convergence, oscillatory convergence, and divergence as the step size crosses spectral thresholds.</desc>
+  <defs>
+    <style>
+      .bg{fill:#fbfcfe}.panel{fill:#fff;stroke:#cbd5e1;stroke-width:1.5}.axis{stroke:#64748b;stroke-width:1.5}.grid{stroke:#e2e8f0;stroke-width:1}.stable{fill:none;stroke:#087e8b;stroke-width:4}.osc{fill:none;stroke:#2563eb;stroke-width:4}.div{fill:none;stroke:#c2413b;stroke-width:4}.zero{stroke:#64748b;stroke-width:1.4;stroke-dasharray:6 5}.head{font:700 20px system-ui,sans-serif;fill:#172033}.label{font:15px system-ui,sans-serif;fill:#334155}.small{font:13px system-ui,sans-serif;fill:#64748b}.tag{font:700 14px system-ui,sans-serif}.eq{font:italic 15px Georgia,serif;fill:#172033}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1080" height="440"/>
+  <text class="head" x="42" y="38">Quadratic gradient descent: one eigenmode at a time</text>
+  <text class="eq" x="42" y="66">eᵢ(t + 1) = (1 − ηλᵢ)eᵢ(t)  ·  qᵢ = 1 − ηλᵢ</text>
+
+  <g transform="translate(40 92)">
+    <rect class="panel" width="310" height="290" rx="6"/>
+    <text class="tag" x="18" y="30" fill="#087e8b">MONOTONE</text>
+    <text class="eq" x="18" y="54">0 &lt; η &lt; 1/λmax</text>
+    <line class="grid" x1="45" y1="100" x2="285" y2="100"/><line class="grid" x1="45" y1="150" x2="285" y2="150"/><line class="grid" x1="45" y1="200" x2="285" y2="200"/>
+    <line class="axis" x1="45" y1="76" x2="45" y2="244" marker-end="url(#arrow)"/><line class="axis" x1="45" y1="220" x2="288" y2="220" marker-end="url(#arrow)"/>
+    <line class="zero" x1="45" y1="220" x2="285" y2="220"/>
+    <path class="stable" d="M48 92 C82 130 104 164 140 187 S216 214 282 219"/>
+    <text class="small" x="16" y="88">eᵢ</text><text class="small" x="282" y="240">t</text>
+    <text class="label" x="18" y="272">0 &lt; qᵢ &lt; 1: no sign changes</text>
+  </g>
+
+  <g transform="translate(385 92)">
+    <rect class="panel" width="310" height="290" rx="6"/>
+    <text class="tag" x="18" y="30" fill="#2563eb">OSCILLATORY</text>
+    <text class="eq" x="18" y="54">1/λmax &lt; η &lt; 2/λmax</text>
+    <line class="grid" x1="45" y1="100" x2="285" y2="100"/><line class="grid" x1="45" y1="150" x2="285" y2="150"/><line class="grid" x1="45" y1="200" x2="285" y2="200"/>
+    <line class="axis" x1="45" y1="76" x2="45" y2="244" marker-end="url(#arrow)"/><line class="axis" x1="45" y1="170" x2="288" y2="170" marker-end="url(#arrow)"/>
+    <line class="zero" x1="45" y1="170" x2="285" y2="170"/>
+    <path class="osc" d="M48 90 L80 228 L112 126 L144 202 L176 145 L208 187 L240 156 L282 177"/>
+    <text class="small" x="16" y="88">eᵢ</text><text class="small" x="282" y="190">t</text>
+    <text class="label" x="18" y="272">−1 &lt; qᵢ &lt; 0: alternating decay</text>
+  </g>
+
+  <g transform="translate(730 92)">
+    <rect class="panel" width="310" height="290" rx="6"/>
+    <text class="tag" x="18" y="30" fill="#c2413b">UNSTABLE</text>
+    <text class="eq" x="18" y="54">η &gt; 2/λmax</text>
+    <line class="grid" x1="45" y1="100" x2="285" y2="100"/><line class="grid" x1="45" y1="150" x2="285" y2="150"/><line class="grid" x1="45" y1="200" x2="285" y2="200"/>
+    <line class="axis" x1="45" y1="76" x2="45" y2="244" marker-end="url(#arrow)"/><line class="axis" x1="45" y1="160" x2="288" y2="160" marker-end="url(#arrow)"/>
+    <line class="zero" x1="45" y1="160" x2="285" y2="160"/>
+    <path class="div" d="M48 146 L83 177 L118 126 L153 202 L188 92 L223 231 L257 66 L282 246"/>
+    <text class="small" x="16" y="88">eᵢ</text><text class="small" x="282" y="180">t</text>
+    <text class="label" x="18" y="272">|qᵢ| &gt; 1: growing amplitude</text>
+  </g>
+  <text class="small" x="40" y="418">The largest Hessian eigenvalue controls stability; the smallest controls the slowest stable mode.</text>
+</svg>

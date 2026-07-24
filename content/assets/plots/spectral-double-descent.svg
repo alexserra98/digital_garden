@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="470" viewBox="0 0 1080 470" role="img" aria-labelledby="title desc">
+  <title id="title">Spectral learning dynamics and double descent</title>
+  <desc id="desc">Panels show spectral mode learning, time-dependent bias and variance, and a test-error peak at interpolation.</desc>
+  <defs>
+    <style>
+      .bg{fill:#fbfcfe}.panel{fill:#fff;stroke:#cbd5e1;stroke-width:1.5}.axis{stroke:#64748b;stroke-width:1.4}.grid{stroke:#e2e8f0;stroke-width:1}.head{font:700 20px system-ui,sans-serif;fill:#172033}.label{font:15px system-ui,sans-serif;fill:#334155}.small{font:13px system-ui,sans-serif;fill:#64748b}.tag{font:700 14px system-ui,sans-serif}.bias{fill:none;stroke:#087e8b;stroke-width:4}.var{fill:none;stroke:#d97706;stroke-width:4}.total{fill:none;stroke:#1d4ed8;stroke-width:4}.red{fill:none;stroke:#c2413b;stroke-width:4}.dash{stroke-dasharray:7 6}.fillblue{fill:#bfdbfe;opacity:.65}.fillteal{fill:#99f6e4;opacity:.7}.fillred{fill:#fecaca;opacity:.65}
+    </style>
+  </defs>
+  <rect class="bg" width="1080" height="470"/>
+  <text class="head" x="40" y="38">Linear regression through the spectrum</text>
+  <text class="small" x="40" y="64">Large eigenvalues are learned first; near interpolation, small eigenvalues amplify label noise.</text>
+
+  <g transform="translate(40 92)">
+    <rect class="panel" width="310" height="320" rx="6"/>
+    <text class="tag" x="18" y="29" fill="#087e8b">MODE LEARNING</text>
+    <line class="axis" x1="44" y1="270" x2="286" y2="270"/><line class="axis" x1="44" y1="70" x2="44" y2="270"/>
+    <line class="grid" x1="44" y1="220" x2="286" y2="220"/><line class="grid" x1="44" y1="170" x2="286" y2="170"/><line class="grid" x1="44" y1="120" x2="286" y2="120"/>
+    <path class="bias" d="M45 267 C66 178 97 112 151 89 S247 78 286 77"/>
+    <path class="total" d="M45 267 C103 252 145 217 178 165 S242 91 286 80"/>
+    <text class="small" x="222" y="101" fill="#087e8b">large λ</text><text class="small" x="221" y="160" fill="#1d4ed8">small λ</text>
+    <text class="small" x="22" y="67">learned</text><text class="small" x="273" y="293">t</text>
+    <text class="label" x="18" y="308">time scale τᵢ ∝ 1/λᵢ</text>
+  </g>
+
+  <g transform="translate(385 92)">
+    <rect class="panel" width="310" height="320" rx="6"/>
+    <text class="tag" x="18" y="29" fill="#1d4ed8">EARLY STOPPING</text>
+    <line class="axis" x1="44" y1="270" x2="286" y2="270"/><line class="axis" x1="44" y1="70" x2="44" y2="270"/>
+    <line class="grid" x1="44" y1="220" x2="286" y2="220"/><line class="grid" x1="44" y1="170" x2="286" y2="170"/><line class="grid" x1="44" y1="120" x2="286" y2="120"/>
+    <path class="bias" d="M45 86 C83 117 121 165 163 204 S241 246 286 256"/>
+    <path class="var" d="M45 263 C116 260 165 245 203 207 S260 132 286 95"/>
+    <path class="total" d="M45 88 C91 120 127 160 157 176 S216 171 242 146 S270 112 286 95"/>
+    <line x1="171" y1="70" x2="171" y2="270" stroke="#c2413b" stroke-width="2" stroke-dasharray="6 5"/>
+    <circle cx="171" cy="174" r="5" fill="#c2413b"/>
+    <text class="small" x="177" y="82" fill="#c2413b">stop</text>
+    <text class="small" x="221" y="240" fill="#087e8b">bias</text><text class="small" x="230" y="115" fill="#d97706">variance</text><text class="small" x="221" y="165" fill="#1d4ed8">test</text>
+    <text class="small" x="273" y="293">t</text>
+  </g>
+
+  <g transform="translate(730 92)">
+    <rect class="panel" width="310" height="320" rx="6"/>
+    <text class="tag" x="18" y="29" fill="#c2413b">DOUBLE DESCENT</text>
+    <line class="axis" x1="44" y1="270" x2="286" y2="270"/><line class="axis" x1="44" y1="70" x2="44" y2="270"/>
+    <line class="grid" x1="44" y1="220" x2="286" y2="220"/><line class="grid" x1="44" y1="170" x2="286" y2="170"/><line class="grid" x1="44" y1="120" x2="286" y2="120"/>
+    <path class="fillred" d="M45 208 C99 184 131 147 157 80 C174 54 187 67 198 120 C219 199 252 224 286 238 L286 270 L45 270Z"/>
+    <path class="red" d="M45 208 C99 184 131 147 157 80 C174 54 187 67 198 120 C219 199 252 224 286 238"/>
+    <line x1="176" y1="70" x2="176" y2="270" stroke="#64748b" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <text class="small" x="159" y="291">n/d = 1</text>
+    <text class="small" x="18" y="67">test error</text><text class="small" x="253" y="293">n/d</text>
+    <text class="label" x="18" y="308">interpolation threshold</text>
+  </g>
+  <g transform="translate(40 435)">
+    <line x1="0" y1="0" x2="24" y2="0" class="bias"/><text class="small" x="32" y="5">signal / bias</text>
+    <line x1="150" y1="0" x2="174" y2="0" class="var"/><text class="small" x="182" y="5">noise / variance</text>
+    <line x1="330" y1="0" x2="354" y2="0" class="total"/><text class="small" x="362" y="5">total test error</text>
+  </g>
+</svg>

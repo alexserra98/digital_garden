@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="470" viewBox="0 0 1080 470" role="img" aria-labelledby="title desc">
+  <title id="title">Information exponent and search-phase sample complexity</title>
+  <desc id="desc">The first nonzero Hermite coefficient determines how quickly stochastic gradient descent escapes an uninformative overlap.</desc>
+  <defs>
+    <style>
+      .bg{fill:#fbfcfe}.panel{fill:#fff;stroke:#cbd5e1;stroke-width:1.5}.axis{stroke:#64748b;stroke-width:1.4}.grid{stroke:#e2e8f0;stroke-width:1}.head{font:700 20px system-ui,sans-serif;fill:#172033}.label{font:15px system-ui,sans-serif;fill:#334155}.small{font:13px system-ui,sans-serif;fill:#64748b}.tag{font:700 14px system-ui,sans-serif}.blue{fill:none;stroke:#1d4ed8;stroke-width:4}.teal{fill:none;stroke:#087e8b;stroke-width:4}.red{fill:none;stroke:#c2413b;stroke-width:4}.bar1{fill:#087e8b}.bar2{fill:#1d4ed8}.bar3{fill:#c2413b}
+    </style>
+  </defs>
+  <rect class="bg" width="1080" height="470"/>
+  <text class="head" x="40" y="38">Search phase and information exponent</text>
+  <text class="small" x="40" y="64">The first nonzero Hermite component of the target controls the weak-overlap drift.</text>
+
+  <g transform="translate(40 92)">
+    <rect class="panel" width="480" height="320" rx="6"/>
+    <text class="tag" x="18" y="29" fill="#1d4ed8">ESCAPE FROM RANDOM OVERLAP</text>
+    <line class="axis" x1="58" y1="265" x2="450" y2="265"/><line class="axis" x1="58" y1="68" x2="58" y2="265"/>
+    <line class="grid" x1="58" y1="215" x2="450" y2="215"/><line class="grid" x1="58" y1="165" x2="450" y2="165"/><line class="grid" x1="58" y1="115" x2="450" y2="115"/>
+    <path class="teal" d="M60 255 C111 251 144 235 171 200 S216 116 259 92 S359 78 448 76"/>
+    <path class="red" d="M60 255 C174 255 240 251 290 229 S339 147 370 111 S414 82 448 78"/>
+    <line x1="216" y1="68" x2="216" y2="265" stroke="#087e8b" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <line x1="369" y1="68" x2="369" y2="265" stroke="#c2413b" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <text class="small" x="192" y="288" fill="#087e8b">O(d)</text><text class="small" x="335" y="288" fill="#c2413b">O(d²)</text>
+    <text class="small" x="20" y="70">overlap</text><text class="small" x="438" y="288">n</text>
+    <text class="small" x="278" y="95" fill="#087e8b">ℓ* = 1</text><text class="small" x="378" y="138" fill="#c2413b">ℓ* = 3</text>
+    <text class="label" x="18" y="309">higher-order targets remain flat longer</text>
+  </g>
+
+  <g transform="translate(560 92)">
+    <rect class="panel" width="480" height="320" rx="6"/>
+    <text class="tag" x="18" y="29" fill="#c2413b">SAMPLE-COMPLEXITY SCALE</text>
+    <line class="axis" x1="60" y1="265" x2="450" y2="265"/><line class="axis" x1="60" y1="68" x2="60" y2="265"/>
+    <line class="grid" x1="60" y1="215" x2="450" y2="215"/><line class="grid" x1="60" y1="165" x2="450" y2="165"/><line class="grid" x1="60" y1="115" x2="450" y2="115"/>
+    <rect class="bar1" x="102" y="205" width="72" height="60" rx="3"/>
+    <rect class="bar2" x="216" y="163" width="72" height="102" rx="3"/>
+    <rect class="bar3" x="330" y="87" width="72" height="178" rx="3"/>
+    <text class="label" x="119" y="289">ℓ*=1</text><text class="label" x="233" y="289">ℓ*=2</text><text class="label" x="347" y="289">ℓ*=3</text>
+    <text class="small" x="118" y="194">d</text><text class="small" x="228" y="151">d log d</text><text class="small" x="349" y="76">d²</text>
+    <text class="small" x="18" y="70">samples</text>
+    <text class="label" x="18" y="309">the first nonzero degree sets the escape scale</text>
+  </g>
+  <text class="small" x="40" y="442">ℓ* = min{k ≥ 1 : E[f*(G) Hₖ(G)] ≠ 0}, for G ∼ N(0,1).</text>
+</svg>

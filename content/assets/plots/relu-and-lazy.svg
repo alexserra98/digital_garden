@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="470" viewBox="0 0 1080 470" role="img" aria-labelledby="title desc">
+  <title id="title">ReLU constructions and lazy training</title>
+  <desc id="desc">Panels show a ReLU ramp, a clipped step made from two ramps, a triangular hat made from three ramps, and tangent linearization around network initialization.</desc>
+  <defs>
+    <style>
+      .bg{fill:#fbfcfe}.panel{fill:#fff;stroke:#cbd5e1;stroke-width:1.5}.axis{stroke:#64748b;stroke-width:1.3}.grid{stroke:#e2e8f0;stroke-width:1}.head{font:700 20px system-ui,sans-serif;fill:#172033}.label{font:15px system-ui,sans-serif;fill:#334155}.small{font:13px system-ui,sans-serif;fill:#64748b}.tag{font:700 14px system-ui,sans-serif}.relu{fill:none;stroke:#087e8b;stroke-width:4;stroke-linejoin:round}.step{fill:none;stroke:#1d4ed8;stroke-width:4;stroke-linejoin:round}.hat{fill:none;stroke:#c2413b;stroke-width:4;stroke-linejoin:round}.surface{fill:none;stroke:#1d4ed8;stroke-width:4}.tangent{fill:none;stroke:#d97706;stroke-width:3;stroke-dasharray:7 5}.move{stroke:#c2413b;stroke-width:2.5}
+    </style>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#c2413b"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1080" height="470"/>
+  <text class="head" x="40" y="38">Wide networks: constructive expressivity and lazy training</text>
+  <text class="small" x="40" y="64">Shifted ReLUs assemble local basis functions; near initialization, training follows a kernel linearization.</text>
+
+  <g transform="translate(40 92)">
+    <rect class="panel" width="230" height="300" rx="6"/>
+    <text class="tag" x="16" y="28" fill="#087e8b">ONE RAMP</text>
+    <line class="axis" x1="30" y1="225" x2="204" y2="225"/><line class="axis" x1="76" y1="62" x2="76" y2="250"/>
+    <path class="relu" d="M31 225 L90 225 L194 86"/>
+    <circle cx="90" cy="225" r="4" fill="#087e8b"/>
+    <text class="small" x="85" y="245">b</text>
+    <text class="label" x="16" y="278">σ(x − b)</text>
+  </g>
+
+  <g transform="translate(290 92)">
+    <rect class="panel" width="230" height="300" rx="6"/>
+    <text class="tag" x="16" y="28" fill="#1d4ed8">CLIPPED STEP</text>
+    <line class="axis" x1="30" y1="225" x2="204" y2="225"/><line class="axis" x1="58" y1="62" x2="58" y2="250"/>
+    <path class="step" d="M31 225 L79 225 L130 120 L194 120"/>
+    <line x1="79" y1="225" x2="79" y2="235" stroke="#64748b"/><line x1="130" y1="120" x2="130" y2="235" stroke="#64748b" stroke-dasharray="4 4"/>
+    <text class="small" x="72" y="249">b</text><text class="small" x="118" y="249">b+h</text>
+    <text class="label" x="16" y="278">σ(x−b) − σ(x−b−h)</text>
+  </g>
+
+  <g transform="translate(540 92)">
+    <rect class="panel" width="230" height="300" rx="6"/>
+    <text class="tag" x="16" y="28" fill="#c2413b">TRIANGULAR HAT</text>
+    <line class="axis" x1="30" y1="225" x2="204" y2="225"/><line class="axis" x1="46" y1="62" x2="46" y2="250"/>
+    <path class="hat" d="M31 225 L75 225 L121 91 L168 225 L199 225"/>
+    <line x1="75" y1="225" x2="75" y2="235" stroke="#64748b"/><line x1="121" y1="91" x2="121" y2="235" stroke="#64748b" stroke-dasharray="4 4"/><line x1="168" y1="225" x2="168" y2="235" stroke="#64748b"/>
+    <text class="small" x="62" y="249">b−h</text><text class="small" x="117" y="249">b</text><text class="small" x="158" y="249">b+h</text>
+    <text class="label" x="16" y="278">three shifted ReLUs</text>
+  </g>
+
+  <g transform="translate(790 92)">
+    <rect class="panel" width="250" height="300" rx="6"/>
+    <text class="tag" x="16" y="28" fill="#d97706">LAZY / NTK REGIME</text>
+    <line class="axis" x1="35" y1="235" x2="218" y2="235"/><line class="axis" x1="35" y1="63" x2="35" y2="235"/>
+    <path class="surface" d="M39 211 C78 206 90 176 117 142 S164 104 216 92"/>
+    <line class="tangent" x1="52" y1="211" x2="216" y2="77"/>
+    <circle cx="121" cy="139" r="6" fill="#172033"/>
+    <line class="move" x1="121" y1="139" x2="154" y2="113" marker-end="url(#arrow2)"/>
+    <text class="small" x="91" y="158">θ₀</text><text class="small" x="157" y="111">small Δθ</text>
+    <text class="small" x="130" y="194" fill="#d97706">tangent model</text>
+    <text class="label" x="16" y="278">fθ ≈ fθ₀ + ∇fθ₀ · Δθ</text>
+  </g>
+  <text class="small" x="40" y="430">Piecewise-linear approximation gives universal approximation; frozen tangent features give kernel gradient descent.</text>
+</svg>

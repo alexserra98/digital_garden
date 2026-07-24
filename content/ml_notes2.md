@@ -2,8 +2,8 @@
 title: "Advanced Topics in Machine Learning - Notes part 2"
 date: 2023-10-18T11:30:03+00:00
 tags:
-    - deeplearning_theory
-    - geometric_deeplearning
+    - ml-theory
+    - geometric-dl
     - interpretability
 weight: 1
 mathjax: true
